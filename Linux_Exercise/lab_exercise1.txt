@@ -1,0 +1,36 @@
+1. pwd | ls -al
+
+2. mkdir intern-2020 rapidops-2020
+
+3. touch intern-2020/dev.txt intern-2020/helloworld.txt
+
+4. cat >> intern-2020/dev.txt
+   Hello i am Hardik Motwani
+   Good morning
+   ctrl+D
+
+   echo "helloworld" > helloworld.txt
+
+5. cp intern-2020/dev.txt intern-2020/helloworld.txt rapidops-2020/
+
+6. mv dev.txt dev1.txt | mv helloworld.txt helloworld1.txt
+
+7. chmod u=r dev1.txt | chmod u+rwx,g+rw helloworld1.txt
+
+8. tar -cvf dev1.tar dev1.txt
+   mv dev1.tar ../intern-2020/
+
+9. mv dev1.tar dev2.tar
+
+10. find -name dev.txt
+
+11. top
+
+12. du -a | df -h
+
+13. ps -a | ps 2589
+
+14. wget https://releases.mattermost.com/desktop/4.3.2/mattermost-desktop-4.3.2-linux-amd64.deb
+
+15. ifconfig -a
+    netstat -ie
