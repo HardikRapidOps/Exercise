@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get n elements of an array</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        const arr = ['Apple', 'Banana', 'Pineapple', 'Mango', 'Litchi', 'Orange', 'Plum', 'Cherry'];
+
+        function getElements(n=1) {
+
+            const first = [], last = [];
+
+            for(let i = 0; i < n; i++) {
+                first.push(arr[i]);
+            }
+
+            for(let i = arr.length-1; i > arr.length-1-n; i--) {
+                last.push(arr[i]);
+            }
+
+            // const first = arr.slice(0, n);
+            // const last = arr.slice(-n);
+
+            return `First ${n} elements: ${first} <br>Last ${n} elements: ${last}`;
+        }
+
+        let n = prompt('Enter number of elements to display:', '1');
+
+        document.write(getElements(n));
+        
+    </script>
+</body>
+</html>

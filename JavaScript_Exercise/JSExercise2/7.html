@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get Month name from a particular date</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let inputDate = prompt('Enter date in format yyyy-mm-dd', new Date().toISOString().slice(0, 10));
+        let d = new Date(inputDate);
+        let month = d.toLocaleString('default', {month: 'long'});
+        document.write(month);
+    </script>
+</body>
+</html>

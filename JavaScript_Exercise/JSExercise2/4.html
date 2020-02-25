@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shuffle an array</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        function shuffle(array) {
+            for(let i = array.length - 1; i > 0; i--) {
+                let j = Math.floor(Math.random() * (i + 1));    // random index from 0 to i
+                // swap elements array[i] and array[j]
+                [array[i], array[j]] = [array[j], array[i]];    // "destructuring assignment" syntax
+                // let t = array[i]; array[i] = array[j]; array[j] = t;
+            }
+        }
+
+        const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        document.writeln("Original array: ", arr);
+        shuffle(arr);
+        document.write("<br><br>After shuffle: ", arr);
+    </script>
+</body>
+</html

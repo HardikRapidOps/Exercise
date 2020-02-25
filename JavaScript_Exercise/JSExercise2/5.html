@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Union and Difference of two array</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        function union(arr1, arr2) {
+            const concat_array = [...arr1, ...arr2];    // const concat_array = arr1.concat(arr2);
+            let union = [...new Set(concat_array)];
+            return union;
+        }
+
+        function difference(arr1, arr2) {
+            let diff = arr1.filter(x => !arr2.includes(x));
+            return diff;
+        }
+
+        const arr1 = ['a', 'b', 'c', 'd'];
+        const arr2 = ['b', 'd', 'e'];
+
+        document.write("Array 1 = { " + arr1 + " }<br>");
+        document.write("Array 2 = { " + arr2 + " }<br><br>");
+        document.write("Union = { " + union(arr1, arr2) + " }<br><br>");
+        document.write("Difference = { " + difference(arr1, arr2) + " }");
+
+    </script>
+</body>
+</html>

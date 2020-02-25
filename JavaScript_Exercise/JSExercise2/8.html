@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Difference between two dates</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let oldDate = new Date(prompt('Enter date in format yyyy-mm-dd: ', '1998-02-20'));
+        let curDate = new Date();
+        let millisecondDiff = curDate.getTime() - oldDate.getTime();
+        let secsDiff = Math.floor(millisecondDiff / 1000);
+        let minutesDiff = Math.floor(secsDiff / 60);
+        let hoursDiff = Math.floor(minutesDiff / 60);
+        let daysDiff = Math.floor(hoursDiff / 24);
+        let weeksDiff = Math.floor(daysDiff / 7);
+        let yearsDiff = curDate.getFullYear() - oldDate.getFullYear();
+        let months = (yearsDiff * 12) + (curDate.getMonth() - oldDate.getMonth());
+
+        document.write(`Difference is: ${yearsDiff} years, ${months} months, ${daysDiff} days, ${hoursDiff} hours, ${minutesDiff} minutes, ${secsDiff} seconds`);
+    </script>
+</body>
+</html>

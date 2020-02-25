@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete particular object from array and add new object at particular position</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let employee = [
+            {
+                name: 'Hardik',
+                age: 21
+            },
+            {
+                name: 'Alia',
+                age: 23
+            },
+            {
+                name: 'Virat',
+                age: 28
+            },
+            {
+                name: 'Ananya',
+                age: 20
+            },
+            {
+                name: 'Joe',
+                age: 32
+            }
+        ];
+
+        function updateEmployee(position, name, age) {
+            employee.splice(position, 1, {name: name, age: age});
+            return employee;
+        }
+
+        document.write("Original Employee list<br>")
+        employee.forEach(element => document.writeln("Name: " + element.name + " Age: " + element.age + ", "));
+        const deletePositon = prompt('Enter position to delete object: ', '1');
+        const newObjectName = prompt('Enter name: ', 'Harry');
+        const newObjectAge = prompt('Enter age: ', '51');
+        const newEmployee = updateEmployee(deletePositon, newObjectName, newObjectAge);
+        document.write("<br><br>Updated Employee<br>")
+        newEmployee.forEach(element => document.write("Name: " + element.name + " Age: " + element.age + "<br>"));
+        // console.log(employee);
+
+    </script>
+</body>
+</html>

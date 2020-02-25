@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert Unix timestamp to time</title>
+</head>
+<body>
+    <p>UNIX Timestamp is: 1581570421</p>
+    <p>Time is: <span class="output"></span></p>
+    <button onclick="convertTimestampToTime()">Get time from timestamp</button>
+    <script>
+        'use strict';
+        function convertTimestampToTime() {
+            let unixTimestamp = 1581570421;
+            let dateObj = new Date(unixTimestamp * 1000);   // convert to milliseconds
+            let utcString = dateObj.toUTCString();
+            let time = utcString.slice(-12, -4);
+            document.querySelector('.output').textContent = time; 
+        }
+        // function convertTimestampToTime() {
+        //     let unixTimestamp = 1581570421;
+        //     let dateObj = new Date(unixTimestamp * 1000);   // convert to milliseconds
+        //     let hours = dateObj.getHours();
+        //     let minutes = dateObj.getMinutes();
+        //     let seconds = dateObj.getSeconds();
+        //     let formattedTime = hours.toString().padStart(2, '0') + ':' + 
+        //             minutes.toString().padStart(2, '0') + ':' + 
+        //             seconds.toString().padStart(2, '0');
+        //     document.querySelector('.output').textContent = formattedTime; 
+        // }
+    </script>
+</body>
+</html>

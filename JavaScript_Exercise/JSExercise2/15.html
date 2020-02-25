@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pattern that matches e-mail addresses</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        function validateEmail(mail) {
+            const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(mail.match(mailformat)) {
+                return true;
+            } else {
+                alert('You have entered an invalid email address.');
+                return false;
+            }
+        }
+
+        const email = prompt('Enter e-mail address: ', 'hardik.motwani@rapidops.com');
+        document.write(validateEmail(email)?'Email is valid':'Email is invalid');
+
+    </script>
+</body>
+</html>

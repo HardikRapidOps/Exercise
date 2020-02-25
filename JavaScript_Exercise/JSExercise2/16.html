@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Print an integer with commas as thousands separator</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        function thousands_separators(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        const number = prompt('Enter number: ', '1000000000');
+        document.write(thousands_separators(number));
+    </script>
+</body>
+</html>

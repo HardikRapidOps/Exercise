@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert dashes (-) between each two even numbers</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        
+        const input = prompt('Enter number:', '025468');
+
+        const result = [input[0]];
+
+        for(let i = 1; i < input.length; i++) {
+            if((input[i-1] % 2 == 0) && (input[i] % 2 == 0)) {
+                result.push('-', input[i]);
+            } else {
+                result.push(input[i]);
+            }
+        }
+
+        document.write(result.join(''));
+
+        // while(+input > 0) {
+
+        //     rem1 = input % 10;
+        //     input = Math.floor(input / 10);
+        //     rem2 = input % 10;
+                        
+        //     if((rem1 % 2 == 0) && (rem2 % 2 == 0)) {
+        //         arr.unshift(rem1);
+        //         arr.unshift('-');
+        //     } else {
+        //         arr.unshift(rem1);
+        //     }
+        // }
+
+        // for(let i = 0; i < result.length-1; i++) {
+        //     document.write(result[i]);
+        // }
+
+    </script>
+</body>
+</html>

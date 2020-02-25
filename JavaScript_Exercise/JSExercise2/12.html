@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert a string within a string at a particular position</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        const originalString = prompt('Enter string: ', 'H Motwani');
+        const insertString = prompt('Enter string to insert: ', 'ardik');
+        const position = +prompt('Enter position: ', '1');
+        document.write(originalString.slice(0, position) + insertString + originalString.substring(position));
+    </script>
+</body>
+</html>
