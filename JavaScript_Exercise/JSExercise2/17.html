@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Create table</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        const m = prompt('Enter number of rows: ', '3');
+        const n = prompt('Enter number of columns: ', '3');
+
+        const tbl = document.createElement('table');
+        tbl.border = '1';
+
+        for(let i = 0; i < m; i++) {
+            const row = document.createElement('tr');
+            for(let j = 0; j < n; j++) {
+                const col = document.createElement('td');
+                col.style.padding = '1rem';
+                // col.appendChild(document.createTextNode(`Row-${i} Column-${j}`));
+                col.innerHTML = `Row-${i} Column-${j}`;
+                row.appendChild(col);
+            }
+            tbl.appendChild(row);
+        }
+        
+        document.body.appendChild(tbl);
+    </script>
+</body>
+</html>

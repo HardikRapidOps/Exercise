@@ -26,11 +26,12 @@ function registrationFormValidation() {
                         
                         users.push(
                             {
-                                id: users.length+1, // id : users[users.length-1].id + 1,
+                                id: (users.length===0) ? 1 : (users[users.length-1].id + 1),   // id: users.length+1,
                                 userName: uname.value,
                                 email: uemail.value,
                                 password: passid.value,
-                                role: role.value
+                                role: role.value,
+                                courses: []
                             }
                         );
 
@@ -111,6 +112,7 @@ function validUser(utype) {
 // ------------------------------------------------------------ LOGIN ------------------------------------------------------------
 
 function loginFormValidation() {
+    event.preventDefault();
     const uemail = document.login.email;
     const passid = document.login.password;
 
@@ -118,7 +120,15 @@ function loginFormValidation() {
         if(uemail.value == users[i].email) {
             if(passid.value == users[i].password) {
                 alert('Login successful');
-                // window.location.href = "/Task1/user/index.html";
+                if(users[i].role === 'Admin') {
+                    sessionStorage.setItem('user', users[i].userName);
+                    sessionStorage.setItem('role', users[i].role);
+                    window.location.href = "/JSExercise3/Task1/admin/index.html";
+                } else {
+                    sessionStorage.setItem('user', users[i].userName);
+                    sessionStorage.setItem('role', users[i].role);
+                    window.location.href = "/JSExercise3/Task1/user/index.html";
+                }
                 return true;
             } 
             alert('Password is incorrect');

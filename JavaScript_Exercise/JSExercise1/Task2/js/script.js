@@ -1,45 +1,45 @@
-let obj = [
-    {
-        firstName: "Hardik",
-        lastName: "Motwani"
-    },
-    {
-        firstName: "Honey",
-        lastName: "Kapoor"
-    },
-    {
-        firstName: "Tom",
-        lastName: "Latham"
-    },
-    {
-        firstName: "Jerry",
-        lastName: "Patel"
-    },
-    {
-        firstName: "Shizuka",
-        lastName: "Benjamin"
-    },
-    {
-        firstName: "Kyle",
-        lastName: "Jamieson"
-    },
-    {
-        firstName: "Jane",
-        lastName: "Doe"
-    },
-    {
-        firstName: "Shruti",
-        lastName: "Sinha"
-    },
-    {
-        firstName: "Adam",
-        lastName: "Gilchrist"
-    },
-    {
-        firstName: "Elysse",
-        lastName: "Perry"
-    }
-];
+// let obj = [
+//     {
+//         firstName: "Hardik",
+//         lastName: "Motwani"
+//     },
+//     {
+//         firstName: "Honey",
+//         lastName: "Kapoor"
+//     },
+//     {
+//         firstName: "Tom",
+//         lastName: "Latham"
+//     },
+//     {
+//         firstName: "Jerry",
+//         lastName: "Patel"
+//     },
+//     {
+//         firstName: "Shizuka",
+//         lastName: "Benjamin"
+//     },
+//     {
+//         firstName: "Kyle",
+//         lastName: "Jamieson"
+//     },
+//     {
+//         firstName: "Jane",
+//         lastName: "Doe"
+//     },
+//     {
+//         firstName: "Shruti",
+//         lastName: "Sinha"
+//     },
+//     {
+//         firstName: "Adam",
+//         lastName: "Gilchrist"
+//     },
+//     {
+//         firstName: "Elysse",
+//         lastName: "Perry"
+//     }
+// ];
 
 const dynamicArray = [];
 // const body = document.getElementsByTagName("body")[0];

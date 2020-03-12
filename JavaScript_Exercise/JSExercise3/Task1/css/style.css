@@ -84,3 +84,11 @@ html, body {
     padding: 0;
     margin-right: 5px;
 }
+
+/* #studentName:nth-child(odd) {
+    background: green;
+}
+
+#studentName:nth-child(even) {
+    color: yellow;
+} */
